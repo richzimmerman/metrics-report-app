@@ -1,0 +1,123 @@
+body {
+	font-family: "Calibri";
+}
+
+#header {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	margin: 5px auto;
+	padding: 7px 0;
+	display: inline-block;
+	width: 20%;
+	background-color: #d3d3d3;
+	border-radius: 10px;
+}
+
+#nav_menu {
+	margin: 40px auto 0 auto;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.region_select {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	height: 80px;
+	width: 160px;
+	border-style: solid;
+	background-color: #CD5555;
+}
+
+.region_select:hover {
+	background-color: #CD9B9B;
+}
+
+.region_select:active {
+	background-color: #A52A2A;
+}
+
+.region_select_selected {
+	background-color: #802A2A;
+}
+
+#display {
+	width: 100%;
+}
+
+th, td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+}
+
+td {
+	height: 30px;
+	text-align: center;
+}
+
+#display td {
+	width: 278px;
+}
+
+#display td span {
+	margin: 3px;
+}
+
+#display td input {
+	width: 230px;
+}
+
+#th_head {
+	width: 25%;
+	color: white;
+	background-color: black;
+	text-decoration: underline;
+	text-decoration-color: #ffa500;
+}
+
+.table_head {
+	background-color:  #ADD8E6;
+}
+
+.row_head {
+	background-color: #e5e5e5;
+}
+
+.disclaim {
+	color: red;
+}
+
+.editing-cell {
+	width: 20%;
+	background-color: #ededed;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+.saveButton, .cancelButton {
+	height: 20px;
+	width: 40px;
+	font-size: 10px;
+	float: right;
+	margin-right: 30px;
+}
+
+.cancelButton {
+	width: 50px;
+}
+
+
+
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

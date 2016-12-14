@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Reporting Feedback Form</title>
+		<link rel="stylesheet" type="text/css" href="./public/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="./public/css/styles.css">
+		<script type="text/javascript" src="./public/src/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="./public/vendor/angular.js"></script>
+	</head>
+
+	<body ng-app="myApp" ngcloak>
+		<div id="header">
+			<h1>Reporting Feedback Form</h1>
+		</div>
+		<div id="nav_menu" ng-controller="mainCtrl">
+			<button class="region_select" ng-repeat="region in templates">{{region.name}}</button>
+		</div>
+		<div id="body_content" ng-cloak>
+			<table id="display" ng-controller="mainCtrl">
+				<tr>
+					<th id="th_head" rowspan="2">Weekly Metrics</th>
+					<th class="table_head" colspan="5">North East</th>
+				</tr>
+				<tr>
+					<th class="table_head" ng-repeat="site in sites | orderBy: 'site'">{{ site.site }}
+					</th>
+				</tr>
+				<tr>
+					<th class="row_head">Item #1</th>
+					<td ng-click="edit = true" ng-repeat="item1 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item1.feedback.item1 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item1.feedback.item1" ng-enter="saveData(item1._id, item1.feedback); edit = false;" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #2</th>
+					<td ng-click="edit = true" ng-repeat="item2 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item2.feedback.item2 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item2.feedback.item2" ng-enter="saveData(item2._id, item2.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #3</th>
+					<td ng-click="edit = true" ng-repeat="item3 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item3.feedback.item3 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item3.feedback.item3" ng-enter="saveData(item3._id, item3.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #4</th>
+					<td ng-click="edit = true" ng-repeat="item4 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item4.feedback.item4 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item4.feedback.item4" ng-enter="saveData(item4._id, item4.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #5</th>
+					<td ng-click="edit = true" ng-repeat="item5 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item5.feedback.item5 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item5.feedback.item5" ng-enter="saveData(item5._id, item5.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #6</th>
+					<td ng-click="edit = true" ng-repeat="item6 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item6.feedback.item6 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item6.feedback.item6" ng-enter="saveData(item6._id, item6.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #7</th>
+					<td ng-click="edit = true" ng-repeat="item7 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item7.feedback.item7 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item7.feedback.item7" ng-enter="saveData(item7._id, item7.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #8</th>
+					<td ng-click="edit = true" ng-repeat="item8 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item8.feedback.item8 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item8.feedback.item8" ng-enter="saveData(item8._id, item8.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #9</th>
+					<td ng-click="edit = true" ng-repeat="item9 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item9.feedback.item9 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item9.feedback.item9" ng-enter="saveData(item9._id, item9.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #10</th>
+					<td ng-click="edit = true" ng-repeat="item10 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item10.feedback.item10 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item10.feedback.item10" ng-enter="saveData(item10._id, item10.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #11</th>
+					<td ng-click="edit = true" ng-repeat="item11 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item11.feedback.item11 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item11.feedback.item11" ng-enter="saveData(item11._id, item11.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #12</th>
+					<td ng-click="edit = true" ng-repeat="item12 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item12.feedback.item12 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item12.feedback.item12" ng-enter="saveData(item12._id, item12.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #13</th>
+					<td ng-click="edit = true" ng-repeat="item13 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item13.feedback.item13 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item13.feedback.item13" ng-enter="saveData(item13._id, item13.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #14</th>
+					<td ng-click="edit = true" ng-repeat="item14 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item14.feedback.item14 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item14.feedback.item14" ng-enter="saveData(item14._id, item14.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #15</th>
+					<td ng-click="edit = true" ng-repeat="item15 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item15.feedback.item15 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item15.feedback.item15" ng-enter="saveData(item15._id, item15.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #16</th>
+					<td ng-click="edit = true" ng-repeat="item16 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item16.feedback.item16 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item16.feedback.item16" ng-enter="saveData(item16._id, item16.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th class="row_head">Item #17</th>
+					<td ng-click="edit = true" ng-repeat="item17 in sites | orderBy: '_id'">
+						<span ng-hide="edit">{{ item17.feedback.item17 }}</span>
+						<input ng-show="edit" class="editing-cell" ng-model="item17.feedback.item17" ng-enter="saveData(item17._id, item17.feedback); edit = false" type="text" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script type="text/javascript" src="./public/src/app.js"></script>
+		
+	</body>
+</html>
